@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "openzeppelin-solidity": "^1.12.0",
     "truffle": "^4.1.15",
-    "openzeppelin-solidity": "^1.12.0"
+    "truffle-privatekey-provider": "^1.1.0"
   },
   "scripts": {
-    "develop" : "truffle develop"
+    "develop": "truffle develop",
+    "compile": "truffle compile",
+    "mainnet": "truffle migrate --network mainnet",
+    "testnet": "truffle migrate --network kovan"
   }
 }
