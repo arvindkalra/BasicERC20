@@ -1,13 +1,12 @@
 pragma solidity ^0.4.2;
 
-import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "./Lockable.sol";
 
-contract IaToken is StandardToken, DetailedERC20{
-    constructor(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)
+contract IaToken is Lockable{
+    constructor(string _name, string _symbol, uint8 _decimals)
     DetailedERC20(_name, _symbol, _decimals)
     public{
-        totalSupply_ = _totalSupply;
+        totalSupply_ = 5000000000 * 10 ** 18;
         balances[msg.sender] = totalSupply_;
     }
 }

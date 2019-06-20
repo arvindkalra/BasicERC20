@@ -52,7 +52,8 @@ module.exports = {
 
         kovan:{
             provider: new PrivateKeyProvider(privateKey, "https://kovan.infura.io/ZWXhYfP2uIvdg1yKuQNY"),
-            network_id: 42
+            network_id: 42,
+            gasPrice: 1e+9
         },
 
         mainnet: {
